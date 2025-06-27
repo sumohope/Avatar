@@ -7,15 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-bg: #0A0A1F;
-            --secondary-bg: #1B1B3A;
-            --accent-color: #6A0DAD; /* Deep Purple */
-            --light-accent: #9A50F0;
-            --text-light: #E0E0FF;
-            --text-muted: #A0A0C0;
-            --border-color: #3A3A6A;
-            --gradient-start: #1A1A4A;
-            --gradient-end: #0A0A1F;
+            --primary-bg: #051A1A; /* Very dark green/teal */
+            --secondary-bg: #0A3333; /* Darker green/teal */
+            --accent-color: #00C853; /* Vibrant green */
+            --light-accent: #32E0C4; /* Aqua/Cyan - for glowing effects */
+            --text-light: #E0FFFF; /* Off-white/light cyan */
+            --text-muted: #80B0B0; /* Muted green/grey */
+            --border-color: #1A5050; /* Darker green border */
+            --gradient-start: #0A2A2A;
+            --gradient-end: #051A1A;
         }
 
         body {
@@ -29,7 +29,7 @@
         }
 
         header {
-            background-color: rgba(10, 10, 31, 0.8);
+            background-color: rgba(5, 26, 26, 0.8); /* Adjusted to new primary-bg */
             padding: 1.5rem 0;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
@@ -48,15 +48,15 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 3.5rem;
             color: var(--light-accent);
-            text-shadow: 0 0 15px rgba(154, 80, 240, 0.6);
+            text-shadow: 0 0 15px rgba(50, 224, 196, 0.6); /* Adjusted to new light-accent */
             letter-spacing: 2px;
             margin: 0;
             animation: pulseText 3s infinite alternate;
         }
 
         @keyframes pulseText {
-            0% { text-shadow: 0 0 10px rgba(154, 80, 240, 0.6); }
-            100% { text-shadow: 0 0 25px rgba(154, 80, 240, 0.9), 0 0 50px rgba(154, 80, 240, 0.4); }
+            0% { text-shadow: 0 0 10px rgba(50, 224, 196, 0.6); } /* Adjusted */
+            100% { text-shadow: 0 0 25px rgba(50, 224, 196, 0.9), 0 0 50px rgba(50, 224, 196, 0.4); } /* Adjusted */
         }
 
         h2 {
@@ -93,7 +93,8 @@
         .hero-section {
             text-align: center;
             padding: 8rem 0;
-            background: url('https://via.placeholder.com/1920x800/0A0A1F/6A0DAD?text=AI+Network+Background') no-repeat center center/cover; /* Placeholder AI image */
+            /* Placeholder for AI image - REPLACE THIS URL WITH YOUR IMAGE */
+            background: url('https://via.placeholder.com/1920x800/0A3333/32E0C4?text=Futuristic+AI+Network+Background') no-repeat center center/cover;
             position: relative;
             overflow: hidden;
         }
@@ -135,14 +136,14 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             border: 2px solid var(--accent-color);
-            box-shadow: 0 0 15px rgba(106, 13, 173, 0.5);
+            box-shadow: 0 0 15px rgba(0, 200, 83, 0.5); /* Adjusted to new accent-color */
         }
 
         .btn-primary:hover {
             background-color: var(--light-accent);
             border-color: var(--light-accent);
             transform: translateY(-3px);
-            box-shadow: 0 0 25px rgba(154, 80, 240, 0.7);
+            box-shadow: 0 0 25px rgba(50, 224, 196, 0.7); /* Adjusted to new light-accent */
         }
 
         .card-grid {
@@ -206,8 +207,8 @@
             justify-content: center;
             border: 2px solid var(--light-accent);
             border-radius: 50%;
-            background-color: rgba(154, 80, 240, 0.1);
-            box-shadow: 0 0 15px rgba(154, 80, 240, 0.4);
+            background-color: rgba(50, 224, 196, 0.1); /* Adjusted */
+            box-shadow: 0 0 15px rgba(50, 224, 196, 0.4); /* Adjusted */
         }
 
         .step-content {
