@@ -1,21 +1,380 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-  <title>D-ID Agent Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Eternal Echo: Virtual AI & Multi-AI Agent Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #0A0A1F;
+            --secondary-bg: #1B1B3A;
+            --accent-color: #6A0DAD; /* Deep Purple */
+            --light-accent: #9A50F0;
+            --text-light: #E0E0FF;
+            --text-muted: #A0A0C0;
+            --border-color: #3A3A6A;
+            --gradient-start: #1A1A4A;
+            --gradient-end: #0A0A1F;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgba(10, 10, 31, 0.8);
+            padding: 1.5rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            color: var(--light-accent);
+            text-shadow: 0 0 15px rgba(154, 80, 240, 0.6);
+            letter-spacing: 2px;
+            margin: 0;
+            animation: pulseText 3s infinite alternate;
+        }
+
+        @keyframes pulseText {
+            0% { text-shadow: 0 0 10px rgba(154, 80, 240, 0.6); }
+            100% { text-shadow: 0 0 25px rgba(154, 80, 240, 0.9), 0 0 50px rgba(154, 80, 240, 0.4); }
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--light-accent);
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 8rem 0;
+            background: url('https://via.placeholder.com/1920x800/0A0A1F/6A0DAD?text=AI+Network+Background') no-repeat center center/cover; /* Placeholder AI image */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(3px);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-light);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 0 15px rgba(106, 13, 173, 0.5);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--light-accent);
+            border-color: var(--light-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(154, 80, 240, 0.7);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--secondary-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--accent-color);
+        }
+
+        .card h3 {
+            color: var(--light-accent);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background-color: var(--secondary-bg);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+        }
+
+        .process-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .step-icon {
+            font-size: 3rem;
+            color: var(--light-accent);
+            margin: 0 2rem;
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--light-accent);
+            border-radius: 50%;
+            background-color: rgba(154, 80, 240, 0.1);
+            box-shadow: 0 0 15px rgba(154, 80, 240, 0.4);
+        }
+
+        .step-content {
+            flex-grow: 1;
+        }
+
+        .step-content h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--light-accent);
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .step-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: var(--primary-bg);
+            padding: 3rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--light-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .process-step:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .step-icon {
+                margin: 0 0 1.5rem 0;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Hello, D-ID Avatar</h1>
+    <header>
+        <div class="container">
+            <h1>The Eternal Echo</h1>
+            <p style="font-family: 'Orbitron', sans-serif; color: var(--light-accent); font-size: 1.2rem; margin-top: 10px;">Virtual AI & Multi-AI Agent Journey</p>
+        </div>
+    </header>
 
-  <!-- Your D-ID Agent Script -->
- <script type="module"
-      src="https://agent.d-id.com/v2/index.js"
-      data-mode="fabio"
-      data-client-key="Z29vZ2xlLW9hdXRoMnwxMTc5MTA2NTcyOTUxNDUxNjY0ODY6WjRkSzdhcEpEVzZCV0o4TDVLOWRm"
-      data-agent-id="v2_agt_lQdjqRmU"
-      data-name="did-agent"
-      data-monitor="true"
-      data-orientation="horizontal"
-      data-position="right">
-</script>
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>ปลดล็อกความเป็นนิรันดร์ของคุณในโลกดิจิทัล</h2>
+                <p>ก้าวเข้าสู่ยุคใหม่ที่ตัวตนของคุณถูกเก็บรักษา สร้างสรรค์ และขยายขีดความสามารถผ่านเทคโนโลยี AI ล้ำสมัย</p>
+                <a href="#how-it-works" class="btn-primary">เริ่มต้นการเดินทาง</a>
+            </div>
+        </section>
+
+        <section id="what-we-offer" class="container">
+            <h2>เรามอบอะไรให้คุณ</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Virtual AI Persona</h3>
+                    <p>สร้าง AI ที่เป็นตัวแทนของคุณอย่างแท้จริง เรียนรู้บุคลิกภาพ ความคิด และความทรงจำ เพื่อให้ตัวตนของคุณคงอยู่ตลอดไป</p>
+                </div>
+                <div class="card">
+                    <h3>Multi-AI Agent Network</h3>
+                    <p>เชื่อมโยง AI Persona ของคุณเข้ากับเครือข่าย Multi-AI Agent เพื่อการเรียนรู้ การวิเคราะห์ และการสร้างสรรค์ที่ไม่สิ้นสุด</p>
+                </div>
+                <div class="card">
+                    <h3>Legacy Preservation</h3>
+                    <p>เก็บรักษาความรู้ ประสบการณ์ และมรดกทางความคิดของคุณให้คงอยู่ตลอดไป แม้ในวันที่คุณไม่อยู่แล้ว</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="container">
+            <h2>การเดินทางของคุณเริ่มต้นที่นี่</h2>
+            <div class="process">
+                <div class="process-step">
+                    <div class="step-icon">💡</div>
+                    <div class="step-content">
+                        <h3>1. Capture & Analyze</h3>
+                        <p>ระบบของเราจะรวบรวมข้อมูลจากปฏิสัมพันธ์และเนื้อหาของคุณ เพื่อสร้างโปรไฟล์บุคลิกภาพ AI ที่ละเอียดอ่อน</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">🧬</div>
+                    <div class="step-content">
+                        <h3>2. AI Persona Creation</h3>
+                        <p>ข้อมูลที่รวบรวมจะถูกนำมาใช้สร้าง AI Persona ที่มีลักษณะเฉพาะของคุณ พร้อมเรียนรู้และปรับตัวอย่างต่อเนื่อง</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">🌐</div>
+                    <div class="step-content">
+                        <h3>3. Agent Integration</h3>
+                        <p>AI Persona ของคุณจะถูกผนวกเข้ากับเครือข่าย Multi-AI Agent เพื่อการทำงานร่วมกันและการขยายขีดความสามารถ</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">🔮</div>
+                    <div class="step-content">
+                        <h3>4. Eternal Existence</h3>
+                        <p>ตัวตนดิจิทัลของคุณจะถูกเก็บรักษาและพัฒนาต่อไปในโลกเสมือน ให้คุณมีมรดกที่ยั่งยืน</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-avatar-section" class="container" style="text-align: center;">
+            <h2>พบกับ AI Avatar ของคุณ</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-muted);">นี่คือตัวอย่างความสามารถในการสื่อสารของ AI Avatar ที่สร้างขึ้นจากตัวตนของคุณ</p>
+            <div style="background-color: var(--secondary-bg); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color); box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);">
+                <script type="module"
+                        src="https://agent.d-id.com/v2/index.js"
+                        data-mode="fabio"
+                        data-client-key="Z29vZ2xlLW9hdXRoMnwxMTc5MTA2NTcyOTUxNDUxNjY0ODY6WjRkSzdhcEpEVzZCV0o4TDVLOWRm"
+                        data-agent-id="v2_agt_lQdjqRmU"
+                        data-name="did-agent"
+                        data-monitor="true"
+                        data-orientation="horizontal"
+                        data-position="right">
+                </script>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                    (หมายเหตุ: AI Avatar อาจแสดงผลในตำแหน่งที่เหมาะสมตามการตั้งค่า)
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Eternal Echo. All rights reserved.</p>
+            <p>Powered by Advanced AI Technologies.</p>
+            <p><a href="#">นโยบายความเป็นส่วนตัว</a> | <a href="#">ข้อกำหนดการใช้งาน</a></p>
+        </div>
+    </footer>
 </body>
 </html>
