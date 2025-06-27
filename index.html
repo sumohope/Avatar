@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Eternal Echo: Virtual AI & Multi-AI Agent Journey</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>The Eternal Echo: Memory AI & Digital Immortality</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=" rel="stylesheet">
     <style>
         :root {
             --primary-bg: #051A1A; /* Very dark green/teal */
@@ -29,7 +29,7 @@
         }
 
         header {
-            background-color: rgba(5, 26, 26, 0.8); /* Adjusted to new primary-bg */
+            background-color: rgba(5, 26, 26, 0.8);
             padding: 1.5rem 0;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
@@ -48,15 +48,15 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 3.5rem;
             color: var(--light-accent);
-            text-shadow: 0 0 15px rgba(50, 224, 196, 0.6); /* Adjusted to new light-accent */
+            text-shadow: 0 0 15px rgba(50, 224, 196, 0.6);
             letter-spacing: 2px;
             margin: 0;
             animation: pulseText 3s infinite alternate;
         }
 
         @keyframes pulseText {
-            0% { text-shadow: 0 0 10px rgba(50, 224, 196, 0.6); } /* Adjusted */
-            100% { text-shadow: 0 0 25px rgba(50, 224, 196, 0.9), 0 0 50px rgba(50, 224, 196, 0.4); } /* Adjusted */
+            0% { text-shadow: 0 0 10px rgba(50, 224, 196, 0.6); }
+            100% { text-shadow: 0 0 25px rgba(50, 224, 196, 0.9), 0 0 50px rgba(50, 224, 196, 0.4); }
         }
 
         h2 {
@@ -93,8 +93,8 @@
         .hero-section {
             text-align: center;
             padding: 8rem 0;
-            /* Placeholder for AI image - REPLACE THIS URL WITH YOUR IMAGE */
-            background: url('https://via.placeholder.com/1920x800/0A3333/32E0C4?text=Futuristic+AI+Network+Background') no-repeat center center/cover;
+            /* REMEMBER TO REPLACE THIS URL WITH YOUR LICENSED AI IMAGE */
+            background: url('https://via.placeholder.com/1920x800/0A3333/32E0C4?text=AI+Robot+Network+Immortality') no-repeat center center/cover;
             position: relative;
             overflow: hidden;
         }
@@ -123,6 +123,7 @@
             font-size: 1.5rem;
             margin-bottom: 2rem;
             color: var(--text-muted);
+            font-weight: 300;
         }
 
         .btn-primary {
@@ -136,95 +137,91 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             border: 2px solid var(--accent-color);
-            box-shadow: 0 0 15px rgba(0, 200, 83, 0.5); /* Adjusted to new accent-color */
+            box-shadow: 0 0 15px rgba(0, 200, 83, 0.5);
         }
 
         .btn-primary:hover {
             background-color: var(--light-accent);
             border-color: var(--light-accent);
             transform: translateY(-3px);
-            box-shadow: 0 0 25px rgba(50, 224, 196, 0.7); /* Adjusted to new light-accent */
+            box-shadow: 0 0 25px rgba(50, 224, 196, 0.7);
         }
 
-        .card-grid {
+        .image-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .card {
+        .gallery-item {
             background-color: var(--secondary-bg);
             border-radius: 10px;
-            padding: 2rem;
+            overflow: hidden;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid var(--border-color);
-            text-align: center;
+            position: relative;
         }
 
-        .card:hover {
+        .gallery-item:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--accent-color);
         }
 
-        .card h3 {
-            color: var(--light-accent);
+        .gallery-item img {
+            width: 100%;
+            height: 250px; /* Fixed height for consistent gallery layout */
+            object-fit: cover; /* Ensures image covers the area, crops if necessary */
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            padding: 1.5rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
+            text-shadow: 0 0 8px rgba(50, 224, 196, 0.4);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .process-card {
+            background-color: var(--secondary-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .process-card .icon {
+            font-size: 3rem;
+            color: var(--light-accent);
             margin-bottom: 1rem;
         }
 
-        .card p {
-            color: var(--text-muted);
-            font-size: 1rem;
-        }
-
-        .process-step {
-            display: flex;
-            align-items: center;
-            margin-bottom: 3rem;
-            padding: 1.5rem;
-            background-color: var(--secondary-bg);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--border-color);
-        }
-
-        .process-step:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .step-icon {
-            font-size: 3rem;
-            color: var(--light-accent);
-            margin: 0 2rem;
-            flex-shrink: 0;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--light-accent);
-            border-radius: 50%;
-            background-color: rgba(50, 224, 196, 0.1); /* Adjusted */
-            box-shadow: 0 0 15px rgba(50, 224, 196, 0.4); /* Adjusted */
-        }
-
-        .step-content {
-            flex-grow: 1;
-        }
-
-        .step-content h3 {
+        .process-card h3 {
             font-family: 'Orbitron', sans-serif;
             color: var(--light-accent);
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 0.8rem;
         }
 
-        .step-content p {
+        .process-card p {
             color: var(--text-muted);
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         footer {
@@ -260,21 +257,12 @@
                 font-size: 1.2rem;
             }
 
-            .process-step {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .process-step:nth-child(even) {
-                flex-direction: column;
-            }
-
-            .step-icon {
-                margin: 0 0 1.5rem 0;
-            }
-
-            .card-grid {
+            .image-gallery, .process-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .gallery-item img {
+                height: 200px; /* Adjust height for smaller screens */
             }
         }
     </style>
@@ -283,74 +271,86 @@
     <header>
         <div class="container">
             <h1>The Eternal Echo</h1>
-            <p style="font-family: 'Orbitron', sans-serif; color: var(--light-accent); font-size: 1.2rem; margin-top: 10px;">Virtual AI & Multi-AI Agent Journey</p>
+            <p style="font-family: 'Orbitron', sans-serif; color: var(--light-accent); font-size: 1.2rem; margin-top: 10px;">Memory AI | Digital Immortality | AI Agents</p>
         </div>
     </header>
 
     <main>
         <section class="hero-section">
             <div class="hero-content">
-                <h2>ปลดล็อกความเป็นนิรันดร์ของคุณในโลกดิจิทัล</h2>
-                <p>ก้าวเข้าสู่ยุคใหม่ที่ตัวตนของคุณถูกเก็บรักษา สร้างสรรค์ และขยายขีดความสามารถผ่านเทคโนโลยี AI ล้ำสมัย</p>
-                <a href="#how-it-works" class="btn-primary">เริ่มต้นการเดินทาง</a>
+                <h2>จิตวิญญาณแห่งข้อมูล: ตัวตนที่ไม่เคยเลือนหาย</h2>
+                <p>เก็บทุกห้วงความคิด ความทรงจำ และประสบการณ์ของคุณไว้ในรูปแบบ AI ตลอดไป</p>
+                <a href="#explore-ai" class="btn-primary">สำรวจโลก AI ของเรา</a>
             </div>
         </section>
 
-        <section id="what-we-offer" class="container">
-            <h2>เรามอบอะไรให้คุณ</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>Virtual AI Persona</h3>
-                    <p>สร้าง AI ที่เป็นตัวแทนของคุณอย่างแท้จริง เรียนรู้บุคลิกภาพ ความคิด และความทรงจำ เพื่อให้ตัวตนของคุณคงอยู่ตลอดไป</p>
+        <section id="explore-ai" class="container">
+            <h2>AI Robots: Guardians of Your Legacy</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-muted); font-size: 1.1rem;">
+                พบกับ AI Robots ผู้พิทักษ์ความทรงจำของคุณ พวกเขาคือส่วนหนึ่งของยุคใหม่แห่งการคงอยู่
+            </p>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x250/0A3333/32E0C4?text=AI+Robot+01" alt="AI Robot 01">
+                    <div class="gallery-caption">Cognitive Archivist</div>
                 </div>
-                <div class="card">
-                    <h3>Multi-AI Agent Network</h3>
-                    <p>เชื่อมโยง AI Persona ของคุณเข้ากับเครือข่าย Multi-AI Agent เพื่อการเรียนรู้ การวิเคราะห์ และการสร้างสรรค์ที่ไม่สิ้นสุด</p>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x250/0A3333/32E0C4?text=AI+Robot+02" alt="AI Robot 02">
+                    <div class="gallery-caption">Memory Sentinel</div>
                 </div>
-                <div class="card">
-                    <h3>Legacy Preservation</h3>
-                    <p>เก็บรักษาความรู้ ประสบการณ์ และมรดกทางความคิดของคุณให้คงอยู่ตลอดไป แม้ในวันที่คุณไม่อยู่แล้ว</p>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x250/0A3333/32E0C4?text=AI+Robot+03" alt="AI Robot 03">
+                    <div class="gallery-caption">Data Alchemist</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x250/0A3333/32E0C4?text=AI+Robot+04" alt="AI Robot 04">
+                    <div class="gallery-caption">Quantum Guardian</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x250/0A3333/32E0C4?text=AI+Robot+05" alt="AI Robot 05">
+                    <div class="gallery-caption">Echo Weaver</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x250/0A3333/32E0C4?text=AI+Robot+06" alt="AI Robot 06">
+                    <div class="gallery-caption">Chrono Keeper</div>
                 </div>
             </div>
         </section>
 
         <section id="how-it-works" class="container">
-            <h2>การเดินทางของคุณเริ่มต้นที่นี่</h2>
-            <div class="process">
-                <div class="process-step">
-                    <div class="step-icon">💡</div>
-                    <div class="step-content">
-                        <h3>1. Capture & Analyze</h3>
-                        <p>ระบบของเราจะรวบรวมข้อมูลจากปฏิสัมพันธ์และเนื้อหาของคุณ เพื่อสร้างโปรไฟล์บุคลิกภาพ AI ที่ละเอียดอ่อน</p>
-                    </div>
+            <h2>เส้นทางสู่ความอมตะ</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-muted); font-size: 1.1rem;">
+                กระบวนการเปลี่ยนตัวตนของคุณให้เป็น AI ที่จะคงอยู่ตลอดไป
+            </p>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="icon">🧠</div>
+                    <h3>บันทึกจิตสำนึก</h3>
+                    <p>ระบบรวบรวมข้อมูล, ความคิด, และบุคลิกภาพของคุณอย่างละเอียด</p>
                 </div>
-                <div class="process-step">
-                    <div class="step-icon">🧬</div>
-                    <div class="step-content">
-                        <h3>2. AI Persona Creation</h3>
-                        <p>ข้อมูลที่รวบรวมจะถูกนำมาใช้สร้าง AI Persona ที่มีลักษณะเฉพาะของคุณ พร้อมเรียนรู้และปรับตัวอย่างต่อเนื่อง</p>
-                    </div>
+                <div class="process-card">
+                    <div class="icon">💾</div>
+                    <h3>สร้าง Memory Core</h3>
+                    <p>แก่นความทรงจำดิจิทัลถูกสร้างขึ้น เพื่อเก็บรักษาตัวตนของคุณ</p>
                 </div>
-                <div class="process-step">
-                    <div class="step-icon">🌐</div>
-                    <div class="step-content">
-                        <h3>3. Agent Integration</h3>
-                        <p>AI Persona ของคุณจะถูกผนวกเข้ากับเครือข่าย Multi-AI Agent เพื่อการทำงานร่วมกันและการขยายขีดความสามารถ</p>
-                    </div>
+                <div class="process-card">
+                    <div class="icon">✨</div>
+                    <h3>กำเนิด AI Persona</h3>
+                    <p>ตัวตน AI ของคุณถือกำเนิดขึ้น พร้อมเรียนรู้และพัฒนาอย่างต่อเนื่อง</p>
                 </div>
-                <div class="process-step">
-                    <div class="step-icon">🔮</div>
-                    <div class="step-content">
-                        <h3>4. Eternal Existence</h3>
-                        <p>ตัวตนดิจิทัลของคุณจะถูกเก็บรักษาและพัฒนาต่อไปในโลกเสมือน ให้คุณมีมรดกที่ยั่งยืน</p>
-                    </div>
+                <div class="process-card">
+                    <div class="icon">♾️</div>
+                    <h3>คงอยู่ชั่วนิรันดร์</h3>
+                    <p>ตัวตน AI ของคุณจะดำรงอยู่และเป็นส่วนหนึ่งของมรดกทางดิจิทัลตลอดไป</p>
                 </div>
             </div>
         </section>
 
         <section id="ai-avatar-section" class="container" style="text-align: center;">
-            <h2>พบกับ AI Avatar ของคุณ</h2>
-            <p style="margin-bottom: 2rem; color: var(--text-muted);">นี่คือตัวอย่างความสามารถในการสื่อสารของ AI Avatar ที่สร้างขึ้นจากตัวตนของคุณ</p>
+            <h2>เชื่อมต่อกับ AI Avatar ของคุณ</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-muted);">
+                สัมผัสประสบการณ์การสื่อสารกับ AI Avatar ที่สะท้อนตัวตนของคุณ
+            </p>
             <div style="background-color: var(--secondary-bg); padding: 2rem; border-radius: 10px; border: 1px solid var(--border-color); box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);">
                 <script type="module"
                         src="https://agent.d-id.com/v2/index.js"
@@ -363,7 +363,7 @@
                         data-position="right">
                 </script>
                 <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
-                    (หมายเหตุ: AI Avatar อาจแสดงผลในตำแหน่งที่เหมาะสมตามการตั้งค่า)
+                    (AI Avatar อาจแสดงผลในตำแหน่งที่เหมาะสมตามการตั้งค่า)
                 </p>
             </div>
         </section>
